@@ -4,3 +4,7 @@
 
 --vim.keymap.set("n", "<leader>cf", "va{Vy", { desc = "Copies entire function in curly-based languages" })
 --vim.keymap.set("n", "<leader>xf", "va{Vd", { desc = "Cuts entire function in curly-based languages" })
+
+-- Disable LazyVim's default terminal keymaps (using toggleterm instead)
+vim.keymap.del("n", "<c-/>")
+vim.keymap.del("t", "<c-/>")

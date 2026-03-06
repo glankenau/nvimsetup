@@ -57,5 +57,29 @@ vim.lsp.config('pylsp', {
   capabilities = capabilities,
 })
 
+vim.lsp.config('yamlls', {
+  cmd = {'yaml-language-server', '--stdio'},
+  filetypes = {'yaml', 'yaml.docker-compose'},
+  root_markers = {'.git'},
+  capabilities = capabilities,
+})
+
+vim.lsp.config('solargraph', {
+  cmd = {'solargraph', 'stdio'},
+  filetypes = {'ruby'},
+  root_markers = {'Gemfile', '.git'},
+  capabilities = capabilities,
+})
+
+vim.lsp.config('rust_analyzer', {
+  cmd = {'rust-analyzer'},
+  filetypes = {'rust'},
+  root_markers = {'Cargo.toml', 'Cargo.lock'},
+  capabilities = capabilities,
+})
+
 vim.lsp.enable('luals')
 vim.lsp.enable('pylsp')
+vim.lsp.enable('yamlls')
+vim.lsp.enable('solargraph')
+vim.lsp.enable('rust_analyzer')

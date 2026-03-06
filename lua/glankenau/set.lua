@@ -26,4 +26,11 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.colorcolumn = "80"
 
+vim.opt.cursorline = true
+
+vim.opt.list = true
+vim.opt.listchars = { space = "·", tab = "» " }
+
 vim.g.mapleader = " "
+
+vim.opt.clipboard = "unnamedplus"

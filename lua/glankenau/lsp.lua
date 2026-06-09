@@ -78,8 +78,24 @@ vim.lsp.config('rust_analyzer', {
   capabilities = capabilities,
 })
 
+vim.lsp.config('ts_ls', {
+    cmd = { 'typescript-language-server', '--stdio' },
+    filetypes = { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact' },
+    root_markers = { 'tsconfig.json', 'jsconfig.json', 'package.json', '.git' },
+    capabilities = capabilities,
+})
+
+vim.lsp.config('csharpls', {
+    cmd = { 'csharp-ls' },
+    filetypes = { 'cs' },
+    root_markers = { '*.sln', '*.csproj', '.git' },
+    capabilities = capabilities,
+})
+
 vim.lsp.enable('luals')
 vim.lsp.enable('pylsp')
 vim.lsp.enable('yamlls')
 vim.lsp.enable('solargraph')
 vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('csharpls')

@@ -21,6 +21,14 @@ return require('packer').startup(function(use)
 	  end
   })
 
+  use({
+	  'sainnhe/everforest',
+	  as = 'everforest',
+	  config = function()
+		  vim.cmd('colorscheme everforest')
+	  end
+  })
+
   use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
   use('nvim-lua/plenary.nvim')
   use{

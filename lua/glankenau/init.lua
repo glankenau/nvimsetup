@@ -1,3 +1,4 @@
+require("glankenau.packer")
 require("glankenau.remap")
 require("glankenau.set")
 require("glankenau.harpoon")
